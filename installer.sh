@@ -16,7 +16,8 @@ echo "Installing PimpMyKali Modules for - Covenent, Sublime Text, Fix Missing, F
 sudo mkdir pimpmykali
 sudo wget https://raw.githubusercontent.com/Dewalt-arch/pimpmykali/master/pimpmykali.sh
 sudo mv pimpmykali.sh ./pimpmykali
-sudo chmod +x pimpmykali.sh
+cd ./pimpmykali
+sudo chmod +x ./pimpmykali.sh
 echo M | sudo ./pimpmykali.sh
 echo L | sudo ./pimpmykali.sh
 echo 3 | sudo ./pimpmykali.sh
@@ -28,7 +29,7 @@ sudo rm /opt/pimpmykali.log
 #PEAS
 echo "Privilege-Escalation-Awesome-Script"
 sudo mkdir /opt/privilege-escalation-awesome-script
-cd opt/privilege-escalation-awesome-script
+cd /opt/privilege-escalation-awesome-script
 sudo wget https://raw.githubusercontent.com/Tib3rius/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh
 sudo wget https://github.com/Tib3rius/privilege-escalation-awesome-scripts-suite/raw/master/winPEAS/winPEASexe/winPEAS/bin/Release/winPEAS.exe
 sudo wget https://raw.githubusercontent.com/Tib3rius/privilege-escalation-awesome-scripts-suite/master/winPEAS/winPEASbat/winPEAS.bat
@@ -46,7 +47,7 @@ echo "Sublime Text Editor Installed by PimpMyKali"
 
 #VScode
 echo "Installing VS Code"
-sudo apt install code-oss
+sudo apt install code-oss -y
 
 #dnspy
 
@@ -97,10 +98,10 @@ sudo git clone https://github.com/danielmiessler/SecLists.git /usr/share/wordlis
 
 #kerbrute
 echo "Installing Kerbrute"
-sudo git clone https://github.com/ropnop/kerbrute /opt/kerbrute/
-cd kerbrute
-sudo make clean
-sudo make linux
+sudo wget https://github.com/ropnop/kerbrute/releases/tag/v1.0.3/kerbrute_windows_386.exe /opt/kerbrute/
+sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe /opt/kerbrute/
+sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 /opt/kerbrute/
+sudo chmod +x kerbrute_linux_amd64
 
 #Docker
 echo "Installing Docker"
